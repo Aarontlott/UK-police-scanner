@@ -7,8 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('neighbourhoods');
-  this.route('forces');
+  this.route('forces', function() {
+    this.route('neighbourhood', { path: 'neighbourhood/:id'});
+  });
 });
 
 export default Router;
