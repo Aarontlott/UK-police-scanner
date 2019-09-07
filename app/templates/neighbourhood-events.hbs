@@ -1,0 +1,9 @@
+	<div class="row section">
+		<div class="col-12">
+			<h2>Events in{{neighbourhoodEvent.neighbourhood.name}}</h2>
+		</div>
+		<div class="col-12 col-md-8">
+			<p>Below you can find all of the events for this neighbourhood. You can also find more information about the force <a href="{{neighbourhoodEvent.neighbourhood.url}}" target="_blank">at their website</a>.</p>
+		</div>
+	</div>
+	<NeighbourhoodEvent @data={{neighbourhoodEvent.neighbourhoodEvent}} @name={{neighbourhoodEvent.force}} @currentForce={{neighbourhoodEvent.force.id}} />

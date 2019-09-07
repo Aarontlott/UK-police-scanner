@@ -9,16 +9,11 @@
 	<div class="row section">
 		{{#each forces as |force|}}
 			<div class="card m-1" style="width: 18rem;">
-				<div class="card-header">
-					<h3 class="card-title">{{force.name}}</h3>
-				</div>
 				<div class="card-body">
+					<h3 class="card-title">{{force.name}}</h3>
 					<h6 class="card-subtitle mb-2 text-muted">{{force.id}}</h6>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			    	<a href="./neighbourhood/{{force.id}}" class="card-link btn btn-primary">View Neighbourhoods</a>
 				</div>
-			  <div class="card-footer">
-			    <a href="./neighbourhood/{{force.id}}" class="card-link btn btn-primary">View Neighbourhoods</a>
-			  </div>
 			</div>
 		{{/each}}
 	</div>
