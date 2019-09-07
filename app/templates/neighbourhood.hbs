@@ -1,3 +1,9 @@
-{{#each forceNeighbourhoods as |neighbourhood|}}
-	<h4 alt="{{neighbourhood.id}}">{{neighbourhood.name}}</h4>
-{{/each}}
+	<div class="row section">
+		<div class="col-12">
+			<h2>Neighbourhoods of {{forceNeighbourhoods.force.name}}</h2>
+		</div>
+		<div class="col-12 col-md-8">
+			<p>Below you can find all of the neighbourhoods for this force. You can also find more information about the force <a href="{{forceNeighbourhoods.force.url}}" target="_blank">at their website</a>.</p>
+		</div>
+	</div>
+	<Neighbourhood @data={{forceNeighbourhoods.neighbourhoods}} @name={{forceNeighbourhoods.force}} />
