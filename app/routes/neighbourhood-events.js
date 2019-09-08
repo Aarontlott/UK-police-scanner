@@ -2,12 +2,11 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
 	model(params){
-		var forceName = this.store.queryRecord('specificForce', { id: params.force } );
-		var retArray = {"neighbourhood":"","neighbourhoodEvent":""};
-		retArray.neighbourhood = forceName;
+		var retArray = {"neighbourhood":"","neighbourhoodEvent":"","force":""};
+		retArray.neighbourhood = this.store.queryRecord('specificNeighbourhood', { forceId: params.force, id: params.id  } );
+		retArray.force = this.store.queryRecord('specificForce', { id: params.force } );
 		retArray.neighbourhoodEvent = this.store.query('neighbourhoodEvent', { forceId: params.force, id: params.id });
 		return retArray;
-		// return this.store.query('neighbourhoodEvent', { forceId: params.force, id: params.id });
 	},
 
 	setupController(controller, model) {

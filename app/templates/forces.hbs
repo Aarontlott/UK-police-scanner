@@ -1,19 +1,9 @@
 	<div class="row section">
 		<div class="col-12">
-			<h2>The Forces</h2>
+			<h1>Welcome to the UK Police event finder</h1>
 		</div>
 		<div class="col-12 col-md-8">
-			<p>Below you can find all of the Police Forces in England, Wales and Northern Ireland.</p>
+			<p>Here you can search the UK police database for events in your local neighbourhood.</p>
 		</div>
 	</div>
-	<div class="row section">
-		{{#each forces as |force|}}
-			<div class="card m-1" style="width: 18rem;">
-				<div class="card-body">
-					<h3 class="card-title">{{force.name}}</h3>
-					<h6 class="card-subtitle mb-2 text-muted">{{force.id}}</h6>
-			    	<a href="./neighbourhood/{{force.id}}" class="card-link btn btn-primary">View Neighbourhoods</a>
-				</div>
-			</div>
-		{{/each}}
-	</div>
+	<ForcesList @data={{forces}} />

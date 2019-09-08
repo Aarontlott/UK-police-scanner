@@ -9,10 +9,11 @@
 
 // Forces Cards
 
-h3.card-title {
+.card-title {
     font-size: 1.2rem;
 }
 
-h6.card-subtitle.text-muted {
+.card-subtitle.text-muted {
     text-transform: capitalize;
+    font-size: 1rem;
 }
