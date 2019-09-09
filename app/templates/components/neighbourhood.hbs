@@ -1,0 +1,21 @@
+{{yield}}
+
+<div class="row">
+	<div class="col-12 col-md-8">
+		<p>Gosh, there's a lot of neighbourhoods too! As always, you're welcome to browse all of them if you like, but if you have one in mind you can start typing it below to find it...</p>
+		<form action="">
+			<input class="searchBox form-control" type="text" name="search" placeholder="Start typing a neighbourhood..." {{action "search" on="keyUp"}}>
+		</form>
+	</div>
+</div>
+<div class="row section">
+	{{#each this.data as |neighbourhood|}}
+		<div class="card m-1" style="width: 18rem;">
+			<div class="card-body">
+				<h3 class="card-title">{{neighbourhood.name}}</h3>
+				<p class="card-text">{{neighbourhood.description}}</p>
+		    	<a href="./{{currentForce}}/{{neighbourhood.id}}" class="card-link btn btn-info">View Events</a>
+			</div>
+		</div>
+	{{/each}}
+</div>

@@ -1,0 +1,19 @@
+
+@import "ember-bootstrap/bootstrap";
+
+// General styling
+.section {
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+}
+
+// Forces Cards
+
+.card-title {
+    font-size: 1.2rem;
+}
+
+.card-subtitle.text-muted {
+    text-transform: capitalize;
+    font-size: 1rem;
+}

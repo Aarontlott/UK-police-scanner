@@ -1,0 +1,21 @@
+{{yield}}
+
+<div class="row">
+	<div class="col-12 col-md-8">
+		<p>There are a lot of forces and you're welcome to browse all of them if you like... but if you have one in mind you can start typing it below to find it.</p>
+		<form action="">
+			<input class="searchBox form-control" type="text" name="search" placeholder="Start typing a force or city name..." {{action "search" on="keyUp"}}>
+		</form>
+	</div>
+</div>
+<div class="row section">
+	{{#each this.data as |force|}}
+		<div class="card m-1" style="width: 18rem;">
+			<div class="card-body">
+				<h2 class="card-title">{{force.name}}</h2>
+				<h3 class="card-subtitle mb-2 text-muted">{{force.id}}</h3>
+		    	<a href="./neighbourhood/{{force.id}}" class="card-link btn btn-primary">View Neighbourhoods</a>
+			</div>
+		</div>
+	{{/each}}
+</div>
