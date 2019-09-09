@@ -8,6 +8,10 @@
   	<form action="">
 		<div class="input-group">
 		  <div class="input-group-prepend">
+		  	<div class="type_buttons">
+		  		<button type="button" class="btn btn-outline-primary meeting" {{action "filterByType" "meeting"}}>Meeting</button>
+		  		<button type="button" class="btn btn-outline-primary other" {{action "filterByType" "other"}}>Other</button>
+		  	</div>
 			<span class="input-group-text">Start date</span>
 		  </div>
 			  <input type="date" aria-label="Starting date picker" class="form-control start_date_picker" {{action "dateRange" on="change"}}>
